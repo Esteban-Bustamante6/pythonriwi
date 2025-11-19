@@ -1,17 +1,29 @@
-def borrar(id):
-    input("ingrese el id del estudiante")
-    estudiante_encontrado = estudiante.query.get(id)
-    if not estudiante_encontrado:
-        print("Usuario no encontrado")
+
+def eliminar(estudiantes):
+    if not estudiantes:
+        print("No hay estudiantes para eliminar.")
         return
+
     try:
-        db.session.delete(estudiante_encontrado)
-        db.session.commit()
-        print("Eliminación realizada con éxito")
+        id_buscar = int(input("Ingrese el ID del estudiante a eliminar: "))
+    except ValueError:
+        print("Debe ingresar un número entero.")
+        return
 
-    except Exception as e:
-        db.session.rollback()
-        print("Error al eliminar. Vuelve a intentarlo.")
-        print(f"Detalle del error: {e}")
+    encontrado = False
+    for est in estudiantes:
+        if est["id"] == id_buscar:
+            encontrado = True
+            print(f"Estudiante encontrado: {est}")
 
-    
+            confirmacion = input("¿Está seguro que desea eliminarlo? (s/n): ")
+
+            if confirmacion.lower() == 's':
+                estudiantes.remove(est)
+                print("Estudiante eliminado correctamente.")
+            else:
+                print(" Operación cancelada.")
+            break
+
+    if not encontrado:
+        print("No existe un estudiante con ese ID.")

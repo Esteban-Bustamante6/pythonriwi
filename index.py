@@ -2,6 +2,7 @@ import time
 
 total_estudiantes = []
 
+# * Funcion crear estudiantes
 def crearEstudiante():
     while True:
         try:
@@ -53,7 +54,14 @@ def crearEstudiante():
         except ValueError:
             print('[ERROR]: Valores no válidos, ingrese nuevamente los datos.\n')
 
+# * Funcion eliminar
 
+# * Funcion Actualizar
+
+# * Funcion mostrar valores
+
+
+# ! -------- Funcion Menu ---------------!
 def menu():
     while True:
         try:

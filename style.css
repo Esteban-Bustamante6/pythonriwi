@@ -1,0 +1,42 @@
+.productos-destacados {
+    display: grid;
+    /* Creamos 3 columnas y 2 filas */
+    grid-template-columns: 1fr 2fr 1fr; 
+    grid-template-rows: 250px 200px;
+    
+    /* Espaciado entre las cajas */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Estilos básicos para que las cajas se vean como en tu imagen */
+.item {
+    background-color: #f0f0f0;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+}
+
+/* Asignamos las posiciones específicas según tu dibujo */
+
+.area-1 { grid-column: 1; grid-row: 1; } /* Izquierda arriba */
+
+.area-2 { 
+    grid-column: 2; 
+    grid-row: 1; 
+    background-color: #e8e8e8; /* Un poco diferente por ser el grande */
+} 
+
+.area-3 { grid-column: 3; grid-row: 1; } /* Derecha arriba */
+
+.area-4 { grid-column: 1; grid-row: 2; } /* Izquierda abajo */
+
+.area-5 { grid-column: 2; grid-row: 2; } /* Centro abajo */
+
+.area-6 { grid-column: 3; grid-row: 2; } /* Derecha abajo */

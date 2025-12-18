@@ -1,0 +1,91 @@
+/* Configuración General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #222; /* Fondo oscuro como tu imagen */
+    color: white;
+}
+
+/* --- BARRA LATERAL FLOTANTE --- */
+.sidebar-roja {
+    position: fixed; /* La hace flotar */
+    right: 20px;     /* Separación del borde derecho */
+    top: 0;
+    width: 8px;      /* Ancho de la línea roja */
+    height: 100vh;   /* Ocupa todo el alto de la pantalla */
+    background-color: #ff0000;
+    z-index: 1000;   /* Se asegura de estar por encima de todo */
+}
+
+/* --- NAVEGACIÓN --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #1a1a1a;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo span { color: white; }
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-nav {
+    text-decoration: none;
+    color: white;
+    border: 1px solid red; /* Bordes rojos como en tu foto */
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.user-icon {
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+/* --- SLIDER / HERO --- */
+.hero-slider {
+    height: 400px;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+    url('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.hero-text h1 {
+    font-size: 35px;
+    margin-bottom: 5px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente */
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+/* --- SECCIÓN EXPLORA --- */
+.titulo-explora {
+    text-align: center;
+    background-color: #000;
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 2px solid red;
+    text-transform: uppercase;
+    font-size: 18px;
+}
